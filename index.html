@@ -125,7 +125,7 @@ header p {
 }
 
 .panel {
-    padding: 0 20px;
+    padding: 15px 20px;
     background-color: #fafafa;
     max-height: 0;
     overflow: hidden;
@@ -223,6 +223,7 @@ footer {
         </ul>
     </div>
 
+    <!-- Accordion -->
     <section class="accordion-section">
 
       <button class="accordion">למה לבחור בנו?</button>
@@ -240,6 +241,7 @@ footer {
 
     </section>
 
+    <!-- ביקורות -->
     <div class="reviews">
         <h2>לקוחות מספרים</h2>
 
@@ -270,4 +272,25 @@ footer {
 
 </div>
 
-<
+<footer>
+    © 2025 · שקע שבת אלחוטי
+</footer>
+
+<script>
+// Accordion JS
+var acc = document.getElementsByClassName("accordion");
+for (var i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+});
+</script>
+
+</body>
+</html>
