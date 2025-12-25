@@ -4,8 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>שליטה חכמה – שקע שבת אלחוטי</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Assistant', sans-serif;
@@ -15,6 +20,39 @@ body {
     direction: rtl;
 }
 
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 600;
+    padding: 8px 12px;
+    transition: color 0.2s, background 0.2s;
+}
+
+.nav-container a:hover {
+    color: #004aad;
+}
+
+/* Header */
 header {
     background: #ffffff;
     padding: 40px 20px;
@@ -34,6 +72,7 @@ header p {
     color: #555;
 }
 
+/* Main */
 .main {
     max-width: 900px;
     margin: 40px auto;
@@ -125,16 +164,20 @@ header p {
 }
 
 .panel {
-    padding: 15px 20px;
+    padding: 0 20px;
     background-color: #fafafa;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.3s ease, padding 0.3s ease;
     border-radius: 0 0 8px 8px;
     margin-bottom: 10px;
 }
 
-/* ביקורות */
+.panel.open {
+    padding: 15px 20px;
+}
+
+/* Reviews */
 .reviews {
     margin-top: 60px;
     max-width: 700px;
@@ -181,6 +224,7 @@ header p {
     line-height: 1.6;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 30px 10px;
@@ -192,12 +236,23 @@ footer {
 
 <body>
 
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="#main">בית</a>
+        <a href="#why-us">למה לבחור בנו</a>
+        <a href="#faq">שאלות נפוצות</a>
+        <a href="#reviews">ביקורות</a>
+        <a class="cta" href="https://wa.me/972502762952" target="_blank">WhatsApp</a>
+    </div>
+</nav>
+
 <header>
     <h1>שליטה חכמה. שקט אמיתי.</h1>
     <p>שקע אלחוטי המותאם לשבת וליום-יום</p>
 </header>
 
-<div class="main">
+<div class="main" id="main">
 
     <img class="product-img" 
          src="https://raw.githubusercontent.com/danielatia170800-png/daniel1/main/537e9fde-d6d6-4737-af9c-7845ceeea5c3.jpg" 
@@ -227,14 +282,14 @@ footer {
     <section class="accordion-section">
 
       <button class="accordion">למה לבחור בנו?</button>
-      <div class="panel">
+      <div class="panel" id="why-us">
         <p>• שליטה מלאה על השקע – גם מהטלפון</p>
         <p>• בטיחות מלאה לשימוש בשבת</p>
         <p>• עיצוב מודרני שמתאים לכל בית</p>
       </div>
 
       <button class="accordion">שאלות נפוצות</button>
-      <div class="panel">
+      <div class="panel" id="faq">
         <p><strong>ש: אפשר להשתמש גם מחוץ לשבת?</strong><br>ת: כן, השקע עובד בכל יום ובכל בית.</p>
         <p><strong>ש: איך מתקינים?</strong><br>ת: פשוט מחברים לחשמל והכל מוכן.</p>
       </div>
@@ -242,7 +297,7 @@ footer {
     </section>
 
     <!-- ביקורות -->
-    <div class="reviews">
+    <div class="reviews" id="reviews">
         <h2>לקוחות מספרים</h2>
 
         <div class="review">
@@ -283,10 +338,12 @@ for (var i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
+    if (panel.classList.contains("open")) {
       panel.style.maxHeight = null;
+      panel.classList.remove("open");
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
+      panel.classList.add("open");
     }
   });
 });
