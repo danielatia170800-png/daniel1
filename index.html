@@ -27,7 +27,6 @@ body {
     background: #ffffff;
     border-bottom: 1px solid #e0e0e0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .nav-container {
@@ -37,19 +36,12 @@ body {
     justify-content: space-around;
     align-items: center;
     padding: 10px 20px;
-    flex-wrap: wrap;
 }
 
 .nav-container a {
     text-decoration: none;
     color: #111;
     font-weight: 600;
-    padding: 8px 12px;
-    transition: color 0.2s, background 0.2s;
-}
-
-.nav-container a:hover {
-    color: #004aad;
 }
 
 /* Header */
@@ -63,13 +55,6 @@ header {
 header h1 {
     margin: 0;
     font-size: 34px;
-    font-weight: 700;
-}
-
-header p {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #555;
 }
 
 /* Main */
@@ -93,62 +78,38 @@ header p {
 .price {
     font-size: 30px;
     font-weight: 700;
-    margin: 20px 0;
 }
 
 .features {
     font-size: 18px;
     line-height: 1.8;
-    color: #333;
     margin-bottom: 30px;
 }
 
-.cta-container {
-    margin-top: 30px;
-}
-
+/* CTA */
 .cta {
     display: inline-block;
     padding: 14px 30px;
-    background: #25D366; /* ירוק וואטסאפ */
+    background: #25D366;
     color: white;
     border-radius: 10px;
     text-decoration: none;
     font-size: 18px;
-    transition: opacity 0.2s, transform 0.2s;
 }
 
-.cta:hover {
-    opacity: 0.9;
-    transform: scale(1.05);
-}
-
-.cta-benefits {
-    list-style: none;
-    padding: 0;
-    margin-top: 10px;
-    font-size: 16px;
-    color: #555;
-}
-
-.cta-benefits li {
-    margin-bottom: 5px;
-}
 /* Accordion */
 .accordion-section {
     max-width: 700px;
     margin: 50px auto;
+    text-align: right;
 }
 
 .accordion {
     background: #ffffff;
-    color: #111;
     cursor: pointer;
     padding: 16px 20px;
     width: 100%;
     border: 1px solid #e0e0e0;
-    outline: none;
-    text-align: right;
     font-size: 18px;
     font-weight: 600;
     border-radius: 10px;
@@ -156,11 +117,6 @@ header p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background 0.3s;
-}
-
-.accordion:hover {
-    background: #f5f5f5;
 }
 
 .accordion::after {
@@ -178,70 +134,35 @@ header p {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.35s ease;
-    border-radius: 0 0 10px 10px;
     padding: 0 20px;
+    border-radius: 0 0 10px 10px;
 }
 
 .panel.open {
     padding: 15px 20px;
 }
 
-
-.accordion:hover {
-    background-color: #f0f0f0;
-}
-
 /* Reviews */
 .reviews {
-    margin-top: 60px;
     max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.reviews h2 {
-    font-size: 26px;
-    margin-bottom: 30px;
-    text-align: center;
+    margin: 60px auto;
+    text-align: right;
 }
 
 .review {
     border-top: 1px solid #e6e6e6;
     padding: 20px 0;
-    text-align: right;
-    transition: transform 0.2s;
-}
-
-.review:hover {
-    transform: scale(1.02);
-}
-
-.review-name {
-    font-weight: 600;
-    margin-bottom: 5px;
 }
 
 .review-stars {
-    color: #FFD700; /* כוכבים זהב */
+    color: #FFD700;
     font-size: 20px;
-    margin-bottom: 5px;
-    display: inline-block;
-    transition: transform 0.2s;
-}
-
-.review:hover .review-stars {
-    transform: scale(1.2) rotate(-5deg);
-}
-
-.review-text {
-    color: #444;
-    line-height: 1.6;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 30px 10px;
+    padding: 30px;
     font-size: 14px;
     color: #777;
 }
@@ -250,114 +171,97 @@ footer {
 
 <body>
 
-<!-- Navbar -->
 <nav class="navbar">
-    <div class="nav-container">
-        <a href="#main">בית</a>
-        <a href="#why-us">למה לבחור בנו</a>
-        <a href="#faq">שאלות נפוצות</a>
-        <a href="#reviews">ביקורות</a>
-        <a class="cta" href="https://wa.me/972502762952" target="_blank">WhatsApp</a>
-    </div>
+  <div class="nav-container">
+    <a href="#">בית</a>
+    <a href="#faq">שאלות</a>
+    <a href="#reviews">ביקורות</a>
+    <a class="cta" href="https://wa.me/972502762952" target="_blank">WhatsApp</a>
+  </div>
 </nav>
 
 <header>
-    <h1>שליטה חכמה. שקט אמיתי.</h1>
-    <p>שקע אלחוטי המותאם לשבת וליום-יום</p>
+  <h1>שקע שבת אלחוטי</h1>
+  <p>שליטה חכמה. שקט אמיתי.</p>
 </header>
 
-<div class="main" id="main">
+<div class="main">
 
-    <img class="product-img" 
-         src="https://raw.githubusercontent.com/danielatia170800-png/daniel1/main/537e9fde-d6d6-4737-af9c-7845ceeea5c3.jpg" 
-         alt="שקע שבת אלחוטי">
+  <img class="product-img"
+       src="https://raw.githubusercontent.com/danielatia170800-png/daniel1/main/537e9fde-d6d6-4737-af9c-7845ceeea5c3.jpg">
 
-    <div class="price">80 ₪</div>
+  <div class="price">80 ₪</div>
 
-    <div class="features">
-        • מתאים לשימוש בשבת<br>
-        • שליטה נוחה ופשוטה<br>
-        • עיצוב קומפקטי ומודרני<br>
-        • מתאים לבית ולמשרד
+  <div class="features">
+    • מתאים לשבת<br>
+    • קל לשימוש<br>
+    • עיצוב מודרני
+  </div>
+
+  <a class="cta" href="https://wa.me/972502762952" target="_blank">הזמנה ב-WhatsApp</a>
+
+  <!-- Accordion -->
+  <section class="accordion-section" id="faq">
+
+    <button class="accordion">למה לבחור בנו?</button>
+    <div class="panel">
+      <p>✔ בטיחות מלאה לשבת</p>
+      <p>✔ איכות גבוהה</p>
+      <p>✔ משלוח מהיר</p>
     </div>
 
-    <div class="cta-container">
-        <a class="cta" href="https://wa.me/972502762952" target="_blank">
-            יצירת קשר ב-WhatsApp
-        </a>
-        <ul class="cta-benefits">
-            <li>✔ משלוח מהיר</li>
-            <li>✔ אחריות מלאה</li>
-            <li>✔ תשלום בטוח</li>
-        </ul>
+    <button class="accordion">שאלות נפוצות</button>
+    <div class="panel">
+      <p><strong>איך מתקינים?</strong><br>מחברים לחשמל וזהו.</p>
+      <p><strong>עובד גם ביום חול?</strong><br>כן.</p>
     </div>
 
-    <!-- Accordion -->
-    <section class="accordion-section">
+  </section>
 
-      <button class="accordion">למה לבחור בנו?</button>
-      <div class="panel" id="why-us">
-        <p>• שליטה מלאה על השקע – גם מהטלפון</p>
-        <p>• בטיחות מלאה לשימוש בשבת</p>
-        <p>• עיצוב מודרני שמתאים לכל בית</p>
-      </div>
+  <!-- Reviews -->
+  <div class="reviews" id="reviews">
+    <h2>לקוחות מספרים</h2>
 
-      <button class="accordion">שאלות נפוצות</button>
-      <div class="panel" id="faq">
-        <p><strong>ש: אפשר להשתמש גם מחוץ לשבת?</strong><br>ת: כן, השקע עובד בכל יום ובכל בית.</p>
-        <p><strong>ש: איך מתקינים?</strong><br>ת: פשוט מחברים לחשמל והכל מוכן.</p>
-      </div>
-
-    </section>
-
-    <!-- ביקורות -->
-    <div class="reviews" id="reviews">
-        <h2>לקוחות מספרים</h2>
-
-        <div class="review">
-            <div class="review-name">משה ר. | ירושלים</div>
-            <div class="review-stars">★★★★★</div>
-            <div class="review-text">
-                פתרון מצוין לשבת. עובד בצורה אמינה ומרגיש מוצר איכותי.
-            </div>
-        </div>
-
-        <div class="review">
-            <div class="review-name">רחל כ. | בני ברק</div>
-            <div class="review-stars">★★★★★</div>
-            <div class="review-text">
-                חיפשנו שקע נוח לשבת וזה בדיוק מה שהיינו צריכים. איכותי ומרגיש מוצר רציני.
-            </div>
-        </div>
-
-        <div class="review">
-            <div class="review-name">דניאל ש. | תל אביב</div>
-            <div class="review-stars">★★★★☆</div>
-            <div class="review-text">
-                נוח מאוד לשימוש, עובד מצוין גם ביומיום. עיצוב נקי.
-            </div>
-        </div>
+    <div class="review">
+      <div class="review-stars">★★★★★</div>
+      מוצר מעולה לשבת.
     </div>
+
+    <div class="review">
+      <div class="review-stars">★★★★☆</div>
+      עובד מצוין ונוח.
+    </div>
+  </div>
 
 </div>
 
 <footer>
-    © 2025 · שקע שבת אלחוטי
+  © 2025 · שקע שבת אלחוטי
 </footer>
 
 <script>
-// Accordion JS
-var acc = document.getElementsByClassName("accordion");
-for (var i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
+var accordions = document.querySelectorAll(".accordion");
+
+accordions.forEach(function(acc) {
+  acc.addEventListener("click", function () {
+
+    accordions.forEach(function(other) {
+      if (other !== acc) {
+        other.classList.remove("active");
+        other.nextElementSibling.classList.remove("open");
+        other.nextElementSibling.style.maxHeight = null;
+      }
+    });
+
+    acc.classList.toggle("active");
+    var panel = acc.nextElementSibling;
+
     if (panel.classList.contains("open")) {
-      panel.style.maxHeight = null;
       panel.classList.remove("open");
+      panel.style.maxHeight = null;
     } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
       panel.classList.add("open");
+      panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
 });
