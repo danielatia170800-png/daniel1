@@ -3,108 +3,156 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> שקע אלחוטי המותאם לשבת וליום-יום </title>
-<p1>שליטה חכמה. שקט אמיתי.</p1>
-    
+<title>שליטה חכמה – שקע שבת אלחוטי</title>
+
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap');
 
 body {
     font-family: 'Assistant', sans-serif;
     margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #e0f0ff, #ffffff);
-    text-align: center;
+    background-color: #f4f5f7;
+    color: #1c1c1c;
+    direction: rtl;
 }
 
 header {
-    background-color: #004aad;
-    color: white;
-    padding: 30px 20px;
+    background: #ffffff;
+    padding: 40px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 32px;
+    font-size: 34px;
+    font-weight: 700;
 }
 
-.container {
-    padding: 30px 20px;
+header p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+.main {
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    text-align: center;
 }
 
 .product-img {
-    width: 350px;
-    max-width: 90%;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
-}
-
-.product-img:hover {
-    transform: scale(1.05);
+    width: 380px;
+    max-width: 100%;
+    border-radius: 14px;
+    margin-bottom: 30px;
 }
 
 .price {
-    font-size: 28px;
-    color: #e60000;
-    margin: 15px 0;
-    font-weight: bold;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 20px 0;
 }
 
-.description {
-    font-size: 20px;
-    margin: 15px 0 25px 0;
-    line-height: 1.6;
+.features {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 30px;
 }
 
-.whatsapp-btn {
-    background-color: #25D366;
-    color: white;
-    padding: 20px 40px;
-    font-size: 20px;
-    border-radius: 15px;
-    text-decoration: none;
+.cta-container {
+    margin-top: 30px;
+}
+
+.cta {
     display: inline-block;
-    transition: background-color 0.3s, transform 0.2s;
+    padding: 14px 30px;
+    background: #111827;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: opacity 0.2s;
 }
 
-.whatsapp-btn:hover {
-    background-color: #1ebe57;
-    transform: scale(1.05);
+.cta:hover {
+    opacity: 0.85;
+}
+
+.cta-benefits {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.cta-benefits li {
+    margin-bottom: 5px;
+}
+
+/* עוד מידע + FAQ */
+.more-info, .faq {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: right;
+}
+
+.more-info h2, .faq h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.more-info p, .faq p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
 }
 
 /* ביקורות */
 .reviews {
-    margin: 50px auto;
-    padding: 0 20px;
+    margin-top: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reviews h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .review {
-    background: white;
-    margin: 15px auto;
-    padding: 15px;
-    max-width: 520px;
-    border-radius: 12px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    text-align: right;
+    border-top: 1px solid #e6e6e6;
+    padding: 20px 0;
 }
 
 .review-name {
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 5px;
 }
 
-.stars {
-    color: #f5b301;
-    margin-bottom: 8px;
-    font-size: 18px;
+.review-text {
+    color: #444;
+    line-height: 1.6;
 }
 
 footer {
-    margin-top: 50px;
-    padding: 20px;
+    text-align: center;
+    padding: 30px 10px;
     font-size: 14px;
-    color: #555;
+    color: #777;
 }
 </style>
 </head>
@@ -112,66 +160,81 @@ footer {
 <body>
 
 <header>
-    <h1>שקע שבת מודרני – אלחוטי</h1>
+    <h1>שליטה חכמה. שקט אמיתי.</h1>
+    <p>שקע אלחוטי המותאם לשבת וליום-יום</p>
 </header>
 
-<div class="container">
+<div class="main">
+
     <img class="product-img" 
          src="https://github.com/danielatia170800-png/daniel1/blob/main/537e9fde-d6d6-4737-af9c-7845ceeea5c3.jpg?raw=true" 
          alt="שקע שבת אלחוטי">
 
-    <div class="price">80 ₪ בלבד!</div>
+    <div class="price">80 ₪</div>
 
-    <div class="description">
-        ✅ מתאים לשבת ולשימוש יומיומי<br>
-        ✅ שליטה קלה ונוחה<br>
-        ✅ קומפקטי, חדשני ומודרני<br>
-        ⚡ כמות מוגבלת – אל תחמיצו!
+    <div class="features">
+        • מתאים לשימוש בשבת<br>
+        • שליטה נוחה ופשוטה<br>
+        • עיצוב קומפקטי ומודרני<br>
+        • מתאים לבית ולמשרד
     </div>
 
     <div class="cta-container">
-    <a class="cta" href="https://wa.me/972502762952" target="_blank">
-        יצירת קשר ב-WhatsApp
-    </a>
-    <ul class="cta-benefits">
-        <li>✔ משלוח מהיר</li>
-        <li>✔ אחריות מלאה</li>
-        <li>✔ תשלום בטוח</li>
-    </ul>
-</div>
-
-<div class="reviews">
-    <h2>⭐ ביקורות מלקוחות</h2>
-
-    <div class="review">
-        <div class="stars">★★★★★</div>
-        <div class="review-name">משה ר. (ירושלים)</div>
-        <div>פתרון מעולה לשבת, עובד חלק וללא התעסקות מיותרת.</div>
+        <a class="cta" href="https://wa.me/972502762952" target="_blank">
+            יצירת קשר ב-WhatsApp
+        </a>
+        <ul class="cta-benefits">
+            <li>✔ משלוח מהיר</li>
+            <li>✔ אחריות מלאה</li>
+            <li>✔ תשלום בטוח</li>
+        </ul>
     </div>
 
-    <div class="review">
-        <div class="stars">★★★★★</div>
-        <div class="review-name">רחל כ. (בני ברק)</div>
-        <div>איכותי מאוד, בדיוק מה שחיפשנו לשימוש בשבת.</div>
+    <!-- עוד מידע -->
+    <section class="more-info">
+        <h2>למה לבחור בנו?</h2>
+        <p>• שליטה מלאה על השקע – גם מהטלפון</p>
+        <p>• בטיחות מלאה לשימוש בשבת</p>
+        <p>• עיצוב מודרני שמתאים לכל בית</p>
+    </section>
+
+    <section class="faq">
+        <h2>שאלות נפוצות</h2>
+        <p><strong>ש: אפשר להשתמש גם מחוץ לשבת?</strong><br>ת: כן, השקע עובד בכל יום ובכל בית.</p>
+        <p><strong>ש: איך מתקינים?</strong><br>ת: פשוט מחברים לחשמל והכל מוכן.</p>
+    </section>
+
+    <!-- ביקורות -->
+    <div class="reviews">
+        <h2>לקוחות מספרים</h2>
+
+        <div class="review">
+            <div class="review-name">משה ר. | ירושלים</div>
+            <div class="review-text">
+                פתרון מצוין לשבת. עובד בצורה אמינה ומרגיש מוצר איכותי.
+            </div>
+        </div>
+
+        <div class="review">
+            <div class="review-name">רחל כ. | בני ברק</div>
+            <div class="review-text">
+                חיפשנו שקע נוח לשבת וזה בדיוק מה שהיינו צריכים. איכותי ומרגיש מוצר רציני.
+            </div>
+        </div>
+
+        <div class="review">
+            <div class="review-name">דניאל ש. | תל אביב</div>
+            <div class="review-text">
+                נוח מאוד לשימוש, עובד מצוין גם ביומיום. עיצוב נקי.
+            </div>
+        </div>
     </div>
 
-    <div class="review">
-        <div class="stars">★★★★★</div>
-        <div class="review-name">דניאל ש. (תל אביב)</div>
-        <div>שקע חכם ונוח, שימושי גם ביומיום ולא רק לשבת.</div>
-    </div>
-
-    <div class="review">
-        <div class="stars">★★★★☆</div>
-        <div class="review-name">אורן מ.</div>
-        <div>מוצר טוב, התקנה פשוטה ושירות מעולה.</div>
-    </div>
 </div>
 
 <footer>
-    כל הזכויות שמורות &copy; 2025 – שקע שבת מודרני
+    © 2025 · שקע שבת אלחוטי
 </footer>
 
 </body>
 </html>
-
