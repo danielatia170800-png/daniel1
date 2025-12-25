@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>שליטה חכמה – שקע שבת אלחוטי</title>
-
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&display=swap');
 
@@ -69,11 +68,10 @@ header p {
     margin-top: 30px;
 }
 
-/* כפתור וואטסאפ ירוק */
 .cta {
     display: inline-block;
     padding: 14px 30px;
-    background: #25D366;  /* צבע ירוק וואטסאפ */
+    background: #25D366; /* ירוק וואטסאפ */
     color: white;
     border-radius: 10px;
     text-decoration: none;
@@ -153,11 +151,29 @@ header p {
 .review {
     border-top: 1px solid #e6e6e6;
     padding: 20px 0;
+    text-align: right;
+    transition: transform 0.2s;
+}
+
+.review:hover {
+    transform: scale(1.02);
 }
 
 .review-name {
     font-weight: 600;
     margin-bottom: 5px;
+}
+
+.review-stars {
+    color: #FFD700; /* כוכבים זהב */
+    font-size: 20px;
+    margin-bottom: 5px;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.review:hover .review-stars {
+    transform: scale(1.2) rotate(-5deg);
 }
 
 .review-text {
@@ -184,7 +200,7 @@ footer {
 <div class="main">
 
     <img class="product-img" 
-         src="https://github.com/danielatia170800-png/daniel1/blob/main/537e9fde-d6d6-4737-af9c-7845ceeea5c3.jpg?raw=true" 
+         src="https://raw.githubusercontent.com/danielatia170800-png/daniel1/main/537e9fde-d6d6-4737-af9c-7845ceeea5c3.jpg" 
          alt="שקע שבת אלחוטי">
 
     <div class="price">80 ₪</div>
@@ -207,7 +223,6 @@ footer {
         </ul>
     </div>
 
-    <!-- Accordion -->
     <section class="accordion-section">
 
       <button class="accordion">למה לבחור בנו?</button>
@@ -225,12 +240,12 @@ footer {
 
     </section>
 
-    <!-- ביקורות -->
     <div class="reviews">
         <h2>לקוחות מספרים</h2>
 
         <div class="review">
             <div class="review-name">משה ר. | ירושלים</div>
+            <div class="review-stars">★★★★★</div>
             <div class="review-text">
                 פתרון מצוין לשבת. עובד בצורה אמינה ומרגיש מוצר איכותי.
             </div>
@@ -238,6 +253,7 @@ footer {
 
         <div class="review">
             <div class="review-name">רחל כ. | בני ברק</div>
+            <div class="review-stars">★★★★★</div>
             <div class="review-text">
                 חיפשנו שקע נוח לשבת וזה בדיוק מה שהיינו צריכים. איכותי ומרגיש מוצר רציני.
             </div>
@@ -245,6 +261,7 @@ footer {
 
         <div class="review">
             <div class="review-name">דניאל ש. | תל אביב</div>
+            <div class="review-stars">★★★★☆</div>
             <div class="review-text">
                 נוח מאוד לשימוש, עובד מצוין גם ביומיום. עיצוב נקי.
             </div>
@@ -253,24 +270,4 @@ footer {
 
 </div>
 
-<footer>
-    © 2025 · שקע שבת אלחוטי
-</footer>
-
-<script>
-var acc = document.getElementsByClassName("accordion");
-for (var i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    }
-  });
-}
-</script>
-
-</body>
-</html>
+<
